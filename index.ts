@@ -43,8 +43,7 @@ try {
     }
   }
 
-  const result = `
-${new Date().toLocaleString()}
+  const result = `${new Date().toLocaleString()}
 ===================================
 
 Make: 
