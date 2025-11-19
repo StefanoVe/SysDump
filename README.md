@@ -96,11 +96,3 @@ This tool reads Chrome profile files (Local State and Preferences) and writes th
 
 No license is specified in the repository. Add a `LICENSE` file (for example MIT) if you want to make the project permissively licensed.
 
----
-
-If you want, I can also:
-
-- Add command-line options (target profile, output folder, redact mode).
-- Add a small CONTRIBUTING.md and a LICENSE file (you can tell me which license to apply).
-
-If you'd like an Italian translation or a shorter README, tell me which sections to keep or omit.
