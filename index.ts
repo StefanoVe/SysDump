@@ -11,10 +11,12 @@ try {
   const users = await si.users();
   const system = await si.system();
 
-  const chromeStateBasePath = `C:\\Users\\${users?.[0]?.user}\\AppData\\Local\\Google\\Chrome\\User Data\\Local State`;
+  const chromeUserDataPath = `C:\\Users\\${users?.[0]?.user}\\AppData\\Local\\Google\\Chrome\\User Data`;
 
+  const chromeStateBasePath = `${chromeUserDataPath}\\Local State`;
   const chromeState = await Bun.file(chromeStateBasePath).json();
-  const extensionsBasePath = `C:\\Users\\${users?.[0]?.user}\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions`;
+
+  const extensionsBasePath = `${chromeUserDataPath}\\${chromeState.profile.last_active_profiles?.[0]}\\Extensions`;
   const chromeExtensionsBase = await readdir(extensionsBasePath);
   const chromeExtensions = [];
 
@@ -114,7 +116,7 @@ Chrome:
   Bun.write(
     `output/${users?.[0]?.user}/Preferences`,
     await Bun.file(
-      `C:\\Users\\${users?.[0]?.user}\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Preferences`
+      `${chromeUserDataPath}\\${chromeState.profile.last_active_profiles?.[0]}\\Preferences`
     ).text()
   );
 } catch (e) {
