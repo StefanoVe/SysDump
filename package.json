@@ -1,0 +1,19 @@
+{
+  "name": "sysdump",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "bun --watch ./index.ts ",
+    "build": "bun ./build.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "systeminformation": "^5.27.11"
+  }
+}
