@@ -19,7 +19,6 @@ SysDump is a small utility written in TypeScript for Bun that collects system in
 
 ## Requirements
 
-- Bun runtime installed (the project uses Bun APIs like `Bun.file` and `Bun.write`).
 - Node-compatible environment on Windows with access to the user's AppData folder.
 - Chrome must use the standard user data path for the target user for the Chrome-related parts to succeed.
 
